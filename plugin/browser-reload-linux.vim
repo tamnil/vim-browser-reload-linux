@@ -56,6 +56,12 @@ command! -bar IceweaselReload call s:ReloadBrowser("Iceweasel")
 command! -bar IceweaselReloadStart IceweaselReloadStop | autocmd BufWritePost <buffer> IceweaselReload
 command! -bar IceweaselReloadStop autocmd! BufWritePost <buffer>
 
+
+" Elinks
+command! -bar ElinksReload call s:ReloadBrowser("Elinks")
+command! -bar ElinksReloadStart ElinksReloadStop | autocmd BufWritePost <buffer> ElinksReload
+command! -bar ElinksReloadStop autocmd! BufWritePost <buffer>
+
 " All Browsers
 command! -bar AllBrowserReload silent OperaReload | FirefoxReload | ChromeReload | ChromiumReload | IceweaselReload
 command! -bar AllBrowserReloadStart AllBrowserReloadStop | autocmd BufWritePost <buffer> AllBrowserReload
